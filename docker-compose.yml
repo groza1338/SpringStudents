@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres
+    ports:
+      - "5252:5432"
+    environment:
+      POSTGRES_PASSWORD: abobus
+    volumes:
+      - java_spring_postgres:/var/lib/postgresql/data
+
+volumes:
+  java_spring_postgres:
